@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&display=swap');
+
+:root {
+  font-family: 'Noto Serif KR', serif;
+  color: #f1e4c8;
+  background: #090807;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html, body, #app { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #090807; }
+body { touch-action: none; user-select: none; }
+canvas { display: block; width: 100% !important; height: 100% !important; }
+
+#game-shell {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(84, 31, 22, .22), transparent 40%),
+    linear-gradient(#0b0908, #050504);
+}
+
+#game-shell::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: linear-gradient(rgba(255,255,255,.018) 50%, transparent 50%);
+  background-size: 100% 4px;
+  opacity: .35;
+}
